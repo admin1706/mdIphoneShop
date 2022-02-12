@@ -1,0 +1,473 @@
+/* Basic Styling */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#productDetail {
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgb(148, 146, 146);
+    background-color: var(--white-color);
+}
+
+.productDetail-wrapper {
+    position: relative;
+}
+
+
+/* Columns */
+
+.left-column {
+    width: 65%;
+    position: relative;
+}
+
+.right-column {
+    width: 35%;
+    margin-top: 16px;
+}
+
+
+/* Left Column */
+
+.left-column>img {
+    width: 440px;
+    height: 480px;
+    position: absolute;
+    left: 20%;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.left-column>img.active {
+    opacity: 1;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px 10px;
+    margin-top: -50px;
+    color: rgb(187, 171, 171);
+    font-weight: bold;
+    font-size: 48px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.prev {
+    left: 10%;
+}
+
+.next {
+    right: 10%;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--white-color);
+}
+
+
+/*  */
+
+.product-img-cfg {
+    position: absolute;
+    top: 520px;
+    left: 20%;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 55%;
+    height: 68px;
+    overflow: hidden;
+}
+
+.product-img-cfg>img {
+    margin-right: 8px;
+    border: 2px solid #ccc;
+    padding: 4px;
+}
+
+.product-img-cfg>img.active,
+.product-img-cfg>img:checked {
+    border-color: #C91524;
+}
+
+.product-img-cfg>img:hover {
+    border-color: #C91524;
+    cursor: pointer;
+}
+
+
+/* Right Column */
+
+
+/* Product Description */
+
+.product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+}
+
+.product-description span {
+    font-size: 14px;
+    color: #358ED7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.product-description h1 {
+    font-weight: 400;
+    font-size: 28px;
+    color: #43484D;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+
+.product-description h2 {
+    font-size: 16px;
+    color: #43484D;
+    line-height: 16px;
+}
+
+.product-description i {
+    color: #1cccc3;
+    margin-right: 8px;
+}
+
+.product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+    margin: 10px 0;
+}
+
+
+/* Product Configuration */
+
+.product-color span,
+.cable-config span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #86939E;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+
+/* Product Color */
+
+.product-color {
+    margin-bottom: 24px;
+}
+
+.color-choose div {
+    display: inline-block;
+}
+
+.color-choose input[type="radio"] {
+    display: none;
+}
+
+.color-choose input[type="radio"]+label span {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.color-choose input[type="radio"]+label span {
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+}
+
+.color-choose input[type="radio"]#red+label span {
+    background-color: #C91524;
+}
+
+.color-choose input[type="radio"]#blue+label span {
+    background-color: #314780;
+}
+
+.color-choose input[type="radio"]#black+label span {
+    background-color: #323232;
+}
+
+.color-choose input[type="radio"]:checked+label span {
+    background-image: url(/assets/img/check-icn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Cable Configuration */
+
+.cable-choose {
+    margin-bottom: 16px;
+}
+
+.cable-choose button {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+    margin-bottom: 4px;
+}
+
+.cable-choose button:hover,
+.cable-choose button:active,
+.cable-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+}
+
+.cable-choose button:active,
+.cable-choose button:focus {
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+
+.cable-config {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+}
+
+.cable-quantity {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.cable-quantity button {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    line-height: 24px;
+}
+
+.cable-quantity .minus,
+.cable-quantity .plus {
+    color: var(--white-color);
+    background-color: #1a9c95;
+    border: none;
+    padding: 0;
+}
+
+.cable-quantity .minus:hover,
+.cable-quantity .plus:hover {
+    background-color: #1cccc3;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cable-quantity input {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    text-align: center;
+    padding: 2px;
+    font-size: 16px;
+    font-weight: 300;
+    outline: none;
+}
+
+.cable-config a {
+    color: #358ED7;
+    text-decoration: underline;
+    font-size: 14px;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cable-config a:hover {
+    cursor: pointer;
+}
+
+.cable-config a:before {
+    content: "?";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 2px solid rgba(53, 142, 215, 0.5);
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    opacity: 0.5;
+    margin-right: 5px;
+}
+
+
+/* Product Price */
+
+.product-price {
+    display: block;
+    align-items: center;
+}
+
+.product-price span {
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-btn {
+    display: inline-block;
+    background-color: #1a9c95;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+}
+
+.cart-btn:hover {
+    background-color: #1cccc3;
+    cursor: pointer;
+}
+
+
+/* Product Configuretion */
+
+.product-config {
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; */
+}
+
+.product-config.disable {
+    display: none;
+}
+
+.btn-detail--close {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 1;
+}
+
+.btn-detail--close button {
+    margin: 0;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    border: none;
+    color: var(--white-color);
+    background-color: #1a9c95;
+}
+
+.btn-detail--close button:hover {
+    background-color: #1cccc3;
+    color: var(--white-color);
+}
+
+.btn-detail--close i {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+8tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: inherit;
+    border-style: solid;
+    padding-right: 12px;
+    border-width: 0;
+}
+
+tbody tr:nth-of-type(2n+1) {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+#tskt {
+    z-index: 1;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+    background-color: var(--white-color);
+    will-change: opacity;
+    max-width: 660px;
+    border-collapse: collapse !important;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+
+/* Responsive */
+
+@media (max-width: 940px) {
+    .container {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+    .left-column img {
+        width: 300px;
+        right: 0;
+        top: -65px;
+        left: initial;
+    }
+}
+
+@media (max-width: 535px) {
+    .left-column img {
+        width: 220px;
+        top: -85px;
+    }
+}

@@ -1,0 +1,167 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --header-height-header: 120px;
+    --header-height-navbar: 32px;
+    --header-height-header__with-search: calc(var(--header-height-header) - var(--header-height-navbar));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+#main {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid_full-width {
+    width: 100%;
+}
+
+.grid_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mt-64 {
+    margin-top: 64px !important;
+}
+
+.ml-8 {
+    margin-left: 8px;
+}
+
+.ml-16 {
+    margin-left: 16px;
+}
+
+.mr-8 {
+    margin-right: 8px;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.modal {
+    display: none;
+}
+
+#modal.modal--open {
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__body {
+    /* border: 1px solid #d3d3d3; */
+    --eff__growth-: 0.5;
+    --eff__growth-: 1;
+    margin: auto;
+    z-index: 1;
+    animation: eff__growth linear 0.1s;
+}
+
+.btn {
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    padding: 0;
+    color: #777;
+    background-color: var(--white-color);
+}
+
+.btn.btn--normal:hover {
+    cursor: pointer;
+    background-color: #d3d3d3;
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: #1a9c95;
+}
+
+.btn.btn--primary:hover {
+    background-color: #1cccc3;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+
+/* breadcrumb CSS star */
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 1.4rem;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+
+/* breadcrumb CSS end */
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
